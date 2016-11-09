@@ -15,6 +15,7 @@
             <td>标题：</td>
             <td>
                                 @Html.TextBox("Subject")
+                <div>@Html.ValidationMessageFor(o => o.Subject)</div>
                 
             </td>
         </tr>
@@ -22,6 +23,7 @@
             <td>内容</td>
             <td>
                 @Html.TextArea("Body", new { style = "width:600px; max-width:1000px;" })
+                @Html.ValidationMessageFor(o => o.Body)
             </td>
         </tr>
         <tr>
